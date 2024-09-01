@@ -1,8 +1,23 @@
-function Content() {
+import Form from "./Form";
+
+interface ContentProps {
+  className?: string;
+}
+
+function Content({ className }: ContentProps) {
   return (
-    <div className="px-[10%]">
+    <div
+      className={`ps-[10%] w-[50%] flex flex-col justify-center ${className}`}
+    >
       <div>
-        <h1>Beautiful</h1>
+        <h1 className="text-5xl font-bold">
+          Beautiful <br /> places to explore
+        </h1>
+        <p className="text-xs my-4">
+          Ensuring that the Worl Heritage sites sustain their outstanding
+          universal value is an increasingly channgenging mission.
+        </p>
+        <Form />
       </div>
     </div>
   );

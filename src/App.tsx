@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="h-[100svh] md:h-screen -z-20 text-white">
       <Background />
-      <NavBar />
-      <Content />
+      <NavBar className="h-[15%]" />
+      <Content className="h-[85%]" />
     </div>
   );
 }

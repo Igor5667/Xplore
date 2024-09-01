@@ -4,9 +4,15 @@ import {
 } from "react-icons/md";
 import Button from "./Button";
 
-function NavBar() {
+interface NavBarProps {
+  className?: string;
+}
+
+function NavBar({ className }: NavBarProps) {
   return (
-    <nav className="flex justify-between items-center px-[10%] py-[2%] bg-gradient-to-b from-[#00000054] to-transparent">
+    <nav
+      className={`flex justify-between items-center px-[10%] bg-gradient-to-b from-[#00000054] to-transparent ${className}`}
+    >
       <header className="flex me-auto justify-center items-center">
         <MdOutlineAirplanemodeActive className="text-xplore-pink text-3xl" />
         <h1 className="text-2xl mt-2">Xplore</h1>
