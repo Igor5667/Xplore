@@ -7,9 +7,9 @@ interface ContentProps {
 function Content({ className }: ContentProps) {
   return (
     <div
-      className={`ps-[10%] w-[50%] flex flex-col justify-center ${className}`}
+      className={`ps-[10%] w-[90%] md:w-[60%] lg:w-[50%] flex flex-col justify-center ${className}`}
     >
-      <div>
+      <div className="mb-[20%] md:mb-0 text-center md:text-start">
         <h1 className="text-5xl font-bold">
           Beautiful <br /> places to explore
         </h1>
