@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "xplore-pink": "#FF348E",
+        "xplore-pink": {
+          100: "#FF348E",
+          200: "#d42a75",
+        },
       },
     },
   },
