@@ -2,14 +2,18 @@ import {
   MdOutlineAirplanemodeActive,
   MdOutlineAlignHorizontalLeft,
 } from "react-icons/md";
-import Button from "./Button";
 import { LuMenu } from "react-icons/lu";
+import Button from "./Button";
+import PhoneMenu from "./PhoneMenu";
+import { useState } from "react";
 
 interface NavBarProps {
   className?: string;
 }
 
 function NavBar({ className }: NavBarProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <nav
       className={`flex justify-between items-center px-[5%] md:px-[10%] bg-gradient-to-b from-[#00000054] to-transparent ${className}`}
@@ -28,7 +32,14 @@ function NavBar({ className }: NavBarProps) {
         <MdOutlineAirplanemodeActive size={20} />
         <span className="text-sm">Bookings</span>
       </Button>
-      <LuMenu className="md:hidden" size={24} />
+      <LuMenu
+        className="md:hidden"
+        size={24}
+        onClick={() => setIsMenuOpen(true)}
+      />
+      {isMenuOpen && (
+        <PhoneMenu action={() => setIsMenuOpen(false)} className="md:hidden" />
+      )}
     </nav>
   );
 }
